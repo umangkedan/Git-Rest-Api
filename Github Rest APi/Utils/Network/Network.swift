@@ -15,10 +15,10 @@ enum httpRequest:String{
 }
 
 class Network:NSObject {
-    static func connectWithServer(url: String, httpRequest: httpRequest, queryParameters: [String: String]? = nil, token:String,  completionHandler: @escaping (_ isSucceeded: Bool, _ data: Data?, _ error: String?) -> ()) {
+    static func connectWithServer(url: String, httpRequest: httpRequest, queryParameters: [String: String]? = nil, token:String, completionHandler: @escaping (_ isSucceeded: Bool, _ data: Data?, _ error: String?, _ statusCode:Int?) -> ()) {
         guard var urlComponents = URLComponents(string: url) else {
             let emptyApiData = Data()
-            completionHandler(false, emptyApiData, "Invalid URL")
+            completionHandler(false, emptyApiData, "Invalid URL", nil)
             return
         }
         
@@ -35,7 +35,7 @@ class Network:NSObject {
         
         guard let apiUrl = urlComponents.url else {
             let emptyApiData = Data()
-            completionHandler(false, emptyApiData, "Invalid URL")
+            completionHandler(false, emptyApiData, "Invalid URL", nil)
             return
         }
 
@@ -89,18 +89,26 @@ class Network:NSObject {
                 if Debug.shared.is_DEBUG {
                     print("Error while url session \(error)")
                 }
-                completionHandler(false, emptyApiData, "\(error)")
+                completionHandler(false, emptyApiData, "\(error)", nil)
                 return
             }
             
             // Check for internet Connectivity give exist if no internet
             guard let response = response as? HTTPURLResponse, (200 ..< 299) ~= response.statusCode else {
-                completionHandler(false, nil, "No Internet Connection")
                 return
             }
             
+            /*
+             Handle response Code
+             will be used to verify
+             token status
+             there will be senerio
+             when token maybe expires,
+             and completionHandler will return true,
+             which will lead to user encountering blank display
+            */
             if let data = data {
-                completionHandler(true, data, nil)
+                completionHandler(true, data, nil, response.statusCode)
             }
         }
         task.resume()
