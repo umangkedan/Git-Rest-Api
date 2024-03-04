@@ -2,23 +2,24 @@
 //  GithubModel.swift
 //  Github Rest APi
 //
-//  Created by Inderpreet Singh on 01/03/24.
+//  Created by Umang on 01/03/24.
 //
 
 import Foundation
 
-struct GitHubUser: Codable {
-    var name: String?
-    var bio: String?
-    var avatar_url: String?
-    var email: String?
-    var login: String?
-    var followers: Int?
-    var following:Int?
-    var location:String?
-    var public_repos:Int?
-    var total_private_repos:Int?
-}
+//struct GitHubUser: Codable {
+//    var name: String?
+//    var bio: String?
+//    var avatar_url: String?
+//    var email: String?
+//    var login: String?
+//    var followers: Int?
+//    var following:Int?
+//    var location:String?
+//    var public_repos:Int?
+//    var total_private_repos:Int?
+//    
+//}
 
 class GithubModel:NSObject {
     func logIN(token: String, completionHandler: @escaping (_ isSucceeded: Bool, _ data: GitHubUser?, _ error: String?) -> ()) {

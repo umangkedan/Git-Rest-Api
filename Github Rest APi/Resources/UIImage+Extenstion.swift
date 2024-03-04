@@ -2,7 +2,7 @@
 //  UIImage+Extenstion.swift
 //  APiDemo
 //
-//  Created by Inderpreet Singh on 26/02/24.
+//  Created by Umang on 26/02/24.
 //
 
 import Foundation

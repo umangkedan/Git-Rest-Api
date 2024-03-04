@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFA2D4142B95D7E9002D3648 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA2D4132B95D7E9002D3648 /* UserModel.swift */; };
+		DFAFADD62B95F7CB00213DA1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFADD42B95F7CB00213DA1 /* User+CoreDataClass.swift */; };
+		DFAFADD72B95F7CB00213DA1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFADD52B95F7CB00213DA1 /* User+CoreDataProperties.swift */; };
 		FB3488A32B91BE7E00C604E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488A22B91BE7E00C604E5 /* AppDelegate.swift */; };
 		FB3488A52B91BE7E00C604E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488A42B91BE7E00C604E5 /* SceneDelegate.swift */; };
 		FB3488A72B91BE7E00C604E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488A62B91BE7E00C604E5 /* ViewController.swift */; };
 		FB3488AA2B91BE7E00C604E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3488A82B91BE7E00C604E5 /* Main.storyboard */; };
-		FB3488AD2B91BE7E00C604E5 /* Github_Rest_APi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB3488AB2B91BE7E00C604E5 /* Github_Rest_APi.xcdatamodeld */; };
+		FB3488AD2B91BE7E00C604E5 /* Github Rest APi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB3488AB2B91BE7E00C604E5 /* Github Rest APi.xcdatamodeld */; };
 		FB3488AF2B91BE7F00C604E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB3488AE2B91BE7F00C604E5 /* Assets.xcassets */; };
 		FB3488B22B91BE7F00C604E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB3488B02B91BE7F00C604E5 /* LaunchScreen.storyboard */; };
 		FB3488BE2B91BF1A00C604E5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488BD2B91BF1A00C604E5 /* Network.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DFA2D4132B95D7E9002D3648 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DFAFADD42B95F7CB00213DA1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DFAFADD52B95F7CB00213DA1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FB34889F2B91BE7E00C604E5 /* Github Rest APi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Rest APi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3488A22B91BE7E00C604E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB3488A42B91BE7E00C604E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +174,10 @@
 		FB3488CA2B91BFDC00C604E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DFA2D4132B95D7E9002D3648 /* UserModel.swift */,
 				FB3488D72B91DD3C00C604E5 /* GithubModel.swift */,
+				DFAFADD42B95F7CB00213DA1 /* User+CoreDataClass.swift */,
+				DFAFADD52B95F7CB00213DA1 /* User+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,7 +219,7 @@
 		FB3488CF2B91C01500C604E5 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				FB3488AB2B91BE7E00C604E5 /* Github_Rest_APi.xcdatamodeld */,
+				FB3488AB2B91BE7E00C604E5 /* Github Rest APi.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -298,17 +307,20 @@
 			files = (
 				FB3488BE2B91BF1A00C604E5 /* Network.swift in Sources */,
 				FB3488DD2B91E96000C604E5 /* UserProfileViewController.swift in Sources */,
+				DFAFADD72B95F7CB00213DA1 /* User+CoreDataProperties.swift in Sources */,
 				FB3488C22B91BF3B00C604E5 /* Debug.swift in Sources */,
 				FB3488A72B91BE7E00C604E5 /* ViewController.swift in Sources */,
-				FB3488AD2B91BE7E00C604E5 /* Github_Rest_APi.xcdatamodeld in Sources */,
+				FB3488AD2B91BE7E00C604E5 /* Github Rest APi.xcdatamodeld in Sources */,
 				FB3488DA2B91DE2200C604E5 /* APIConstant.swift in Sources */,
 				FB3488D52B91D9B500C604E5 /* SignInWithPasswordViewController.swift in Sources */,
 				FB3488A32B91BE7E00C604E5 /* AppDelegate.swift in Sources */,
+				DFA2D4142B95D7E9002D3648 /* UserModel.swift in Sources */,
 				FB3488D82B91DD3C00C604E5 /* GithubModel.swift in Sources */,
 				FB3488D22B91C73E00C604E5 /* UIColorHex.swift in Sources */,
 				FB3488A52B91BE7E00C604E5 /* SceneDelegate.swift in Sources */,
 				FB3488E02B91F2A500C604E5 /* UIImage+Extenstion.swift in Sources */,
 				FB3488C52B91BF5F00C604E5 /* AlerUser.swift in Sources */,
+				DFAFADD62B95F7CB00213DA1 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,13 +543,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FB3488AB2B91BE7E00C604E5 /* Github_Rest_APi.xcdatamodeld */ = {
+		FB3488AB2B91BE7E00C604E5 /* Github Rest APi.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				FB3488AC2B91BE7E00C604E5 /* Github_Rest_APi.xcdatamodel */,
 			);
 			currentVersion = FB3488AC2B91BE7E00C604E5 /* Github_Rest_APi.xcdatamodel */;
-			path = Github_Rest_APi.xcdatamodeld;
+			path = "Github Rest APi.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

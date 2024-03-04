@@ -2,15 +2,18 @@
 //  ViewController.swift
 //  Github Rest APi
 //
-//  Created by Inderpreet Singh on 01/03/24.
+//  Created by Umang on 01/03/24.
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
-    
+    let userObj = UserModel()
     let logoImageView = UIImageView()
     let signInWithPassword = UIButton(type: .system)
+    let fetchUsers = UIButton(type: .system)
+    var details : [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +40,18 @@ class ViewController: UIViewController {
         signInWithPassword.layer.borderColor = UIColorHex().hexStringToUIColor(hex: "#24292e").cgColor
         signInWithPassword.layer.borderWidth = 2.0
         
+        fetchUsers.setTitle("Fetch Users", for: .normal)
+        let fetchUserFrame = CGRect(x: 40, y: signInWithPasswordFrame.maxY + 30, width: view.frame.width - 80, height: 40)
+        fetchUsers.frame = fetchUserFrame
+        fetchUsers.tintColor = .white
+        fetchUsers.addTarget(self, action: #selector(userList), for: .touchUpInside)
+        fetchUsers.backgroundColor = UIColorHex().hexStringToUIColor(hex: "#2b3137")
+        fetchUsers.layer.cornerRadius = 9.0
+        fetchUsers.layer.borderColor = UIColorHex().hexStringToUIColor(hex: "#24292e").cgColor
+        fetchUsers.layer.borderWidth = 2.0
+        
         // Add to the view
+        view.addSubview(fetchUsers)
         view.addSubview(logoImageView)
         view.addSubview(signInWithPassword)
     }
@@ -46,5 +60,18 @@ class ViewController: UIViewController {
         let signInWithPasswordView = SignInWithPasswordViewController()
         navigationController?.pushViewController(signInWithPasswordView, animated: true)
     }
+    
+    @objc func userList(){
+        userObj.fetchUser { (users, error) in
+            if let error = error {
+                print("Error fetching users: \(error.localizedDescription)")
+               
+            } else if let users = users {
+                for user in users {
+                    print("User: \(user.name ?? "Unknown")")
+                }
+            }
+        }
+    }
+    
 }
-
