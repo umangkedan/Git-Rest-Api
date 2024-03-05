@@ -38,7 +38,7 @@ class Network:NSObject {
             completionHandler(false, emptyApiData, "Invalid URL", nil)
             return
         }
-
+        
         var apiUrlRequest = URLRequest(url: apiUrl)
         apiUrlRequest.httpMethod = httpRequest.rawValue
         apiUrlRequest.timeoutInterval = 20
@@ -106,7 +106,7 @@ class Network:NSObject {
              when token maybe expires,
              and completionHandler will return true,
              which will lead to user encountering blank display
-            */
+             */
             if let data = data {
                 completionHandler(true, data, nil, response.statusCode)
             }

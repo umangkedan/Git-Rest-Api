@@ -25,8 +25,7 @@ struct GitHubUser: Codable {
 }
 
 class UserModel: NSObject {
-    let gitModel = GithubModel()
-    
+  
     static let managedObjectContext: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError("Unable to access AppDelegate")
@@ -34,52 +33,60 @@ class UserModel: NSObject {
         return appDelegate.persistentContainer.viewContext
     }()
     
-    func saveUser(gitHubUser: GitHubUser) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            print("Unable to access AppDelegate")
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let newUser = User(context: context)
-        
-        newUser.name = gitHubUser.name
-        newUser.avatar_url = gitHubUser.avatar_url
-        newUser.bio = gitHubUser.bio
-        newUser.email = gitHubUser.email
-        newUser.followers = Int16(gitHubUser.followers ?? 0)
-        newUser.following = Int16(gitHubUser.following ?? 0)
-        newUser.location = gitHubUser.location
-        newUser.public_repos = Int16(gitHubUser.public_repos ?? 0)
-        newUser.total_private_repos = Int16(gitHubUser.total_private_repos ?? 0)
-        newUser.login = gitHubUser.login
+    
+    func saveUserToCoreData(user: GitHubUser) {
+       
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: UserModel.managedObjectContext)!
+        let userObject = NSManagedObject(entity: entity, insertInto: UserModel.managedObjectContext)
         
         do {
-            try context.save()
-            print("User saved successfully")
+            // Serialize(encode) user object to Data
+            let userData = try JSONEncoder().encode(user)
+            print("Serialized Data: \(userData)")
+            
+            // Save Data to Core Data
+            userObject.setValue(userData, forKeyPath: "users")
+            
+            // Save context
+            try UserModel.managedObjectContext.save()
+            print("User saved to Core Data successfully")
+            
+        } catch let error as NSError {
+            print("Could not save user to Core Data. \(error), \(error.userInfo)")
+        }
+    }
+
+    func fetchUserFromCoreData() -> [GitHubUser]? {
+        
+        let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        
+        do {
+            let count = try UserModel.managedObjectContext.count(for: fetchRequest)
+            guard count > 0 else {
+                print("No users found in Core Data.")
+                return nil
+            }
+            
+            let fetchedUsers = try UserModel.managedObjectContext.fetch(fetchRequest)
+            var users: [GitHubUser] = []
+            
+            for userObject in fetchedUsers {
+                if let userData = userObject.value(forKey: "users") as? Data {
+                    print("Fetched Data: \(userData)")
+                    // Decoce - Deserialize the user object from data
+                    if let user = try? JSONDecoder().decode(GitHubUser.self, from: userData) {
+                        print("Decoded User: \(user)")
+                        users.append(user)
+                    }
+                }
+            }
+            return users
         } catch {
-            print("Error saving user: \(error.localizedDescription)")
+            print("Could not fetch users: \(error)")
+            return nil
         }
     }
     
-    func fetchUser(completion: @escaping ([User]?, Error?) -> Void) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            completion(nil, NSError(domain: "Github Rest APi", code: -1, userInfo: [NSLocalizedDescriptionKey: "Unable to access AppDelegate"]))
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        
-        do {
-            let users = try context.fetch(fetchRequest)
-            print("Users fetched successfully")
-            completion(users, nil)
-        } catch {
-            print("Error fetching users: \(error.localizedDescription)")
-            completion(nil, error)
-        }
-    }
+    
 }
-
 

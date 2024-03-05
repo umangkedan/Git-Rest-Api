@@ -1,0 +1,26 @@
+PODS:
+  - IQKeyboardManager (6.5.17)
+  - Kingfisher (7.11.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - Kingfisher (~> 7.0)
+  - NVActivityIndicatorView
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManager
+    - Kingfisher
+    - NVActivityIndicatorView
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 904d013844bbae0abe073f015487bfebe5476335
+  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+
+PODFILE CHECKSUM: 51c8b59ffc8537957d6f39dba2b54ff67affc58d
+
+COCOAPODS: 1.15.2

@@ -13,11 +13,10 @@ class ViewController: UIViewController {
     let logoImageView = UIImageView()
     let signInWithPassword = UIButton(type: .system)
     let fetchUsers = UIButton(type: .system)
-    var details : [User] = []
+    var details : [GitHubUser] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
     }
     
@@ -61,17 +60,11 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(signInWithPasswordView, animated: true)
     }
     
-    @objc func userList(){
-        userObj.fetchUser { (users, error) in
-            if let error = error {
-                print("Error fetching users: \(error.localizedDescription)")
-               
-            } else if let users = users {
-                for user in users {
-                    print("User: \(user.name ?? "Unknown")")
-                }
+    @objc func userList() {
+        DispatchQueue.main.async {
+            let savedUserViewController = SavedUserController()
+                self.navigationController?.pushViewController(savedUserViewController, animated: true)
             }
         }
     }
-    
-}
+

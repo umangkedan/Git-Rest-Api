@@ -8,7 +8,7 @@
 import UIKit
 
 class SignInWithPasswordViewController: UIViewController {
-
+    
     let logoImageView = UIImageView()
     let tokenTextField = UITextField()
     let loginButton = UIButton(type: .system)
@@ -19,6 +19,7 @@ class SignInWithPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        textFieldDelegate()
     }
     
     func setupUI() {
@@ -58,21 +59,23 @@ class SignInWithPasswordViewController: UIViewController {
     
     func textFieldDelegate(){
         tokenTextField.delegate = self
+        tokenTextField.becomeFirstResponder()
     }
     
     @objc func loginButtonTapped() {
+        
         model.logIN(token: tokenTextField.text ?? "") { isSucceeded, data, error in
             if isSucceeded {
                 DispatchQueue.main.async {
-                    let userProfileView = UserProfileViewController()
+                    let userProfileView = ProfileController()
                     userProfileView.userData = data
+                    userProfileView.is_selected = true
                     self.navigationController?.pushViewController(userProfileView, animated: true)
                 }
             } else  {
                 DispatchQueue.main.async {
                     AlerUser.alertUser(viewController: self, title: "Fail to Login", message: "Failed to login Error: \(error ?? "")")
                 }
-
             }
         }
     }

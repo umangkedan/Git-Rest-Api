@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06279C34DCB735248F68554C /* Pods_Github_Rest_APi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30285EAF5FF5807D30921A83 /* Pods_Github_Rest_APi.framework */; };
+		DF223CCD2B9644A800F81CFE /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF223CCB2B9644A800F81CFE /* User+CoreDataClass.swift */; };
+		DF223CCE2B9644A800F81CFE /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF223CCC2B9644A800F81CFE /* User+CoreDataProperties.swift */; };
+		DF223CD12B964B5000F81CFE /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF223CCF2B964B5000F81CFE /* ProfileController.swift */; };
+		DF223CD22B964B5000F81CFE /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF223CD02B964B5000F81CFE /* ProfileController.xib */; };
 		DFA2D4142B95D7E9002D3648 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA2D4132B95D7E9002D3648 /* UserModel.swift */; };
-		DFAFADD62B95F7CB00213DA1 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFADD42B95F7CB00213DA1 /* User+CoreDataClass.swift */; };
-		DFAFADD72B95F7CB00213DA1 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFADD52B95F7CB00213DA1 /* User+CoreDataProperties.swift */; };
+		DFAFADDA2B95FC1C00213DA1 /* SavedUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFADD82B95FC1C00213DA1 /* SavedUserController.swift */; };
+		DFAFADDB2B95FC1C00213DA1 /* SavedUserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFAFADD92B95FC1C00213DA1 /* SavedUserController.xib */; };
+		DFAFADDE2B96022400213DA1 /* SavedUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFADDC2B96022400213DA1 /* SavedUserCell.swift */; };
+		DFAFADDF2B96022400213DA1 /* SavedUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFAFADDD2B96022400213DA1 /* SavedUserCell.xib */; };
 		FB3488A32B91BE7E00C604E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488A22B91BE7E00C604E5 /* AppDelegate.swift */; };
 		FB3488A52B91BE7E00C604E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488A42B91BE7E00C604E5 /* SceneDelegate.swift */; };
 		FB3488A72B91BE7E00C604E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488A62B91BE7E00C604E5 /* ViewController.swift */; };
@@ -25,15 +32,21 @@
 		FB3488D62B91D9B500C604E5 /* SignInWithPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3488D42B91D9B500C604E5 /* SignInWithPasswordViewController.xib */; };
 		FB3488D82B91DD3C00C604E5 /* GithubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488D72B91DD3C00C604E5 /* GithubModel.swift */; };
 		FB3488DA2B91DE2200C604E5 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488D92B91DE2200C604E5 /* APIConstant.swift */; };
-		FB3488DD2B91E96000C604E5 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488DB2B91E96000C604E5 /* UserProfileViewController.swift */; };
-		FB3488DE2B91E96000C604E5 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB3488DC2B91E96000C604E5 /* UserProfileViewController.xib */; };
-		FB3488E02B91F2A500C604E5 /* UIImage+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3488DF2B91F2A500C604E5 /* UIImage+Extenstion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30285EAF5FF5807D30921A83 /* Pods_Github_Rest_APi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Rest_APi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A93FB5FA6C0C9F0E7BBE0D3D /* Pods-Github Rest APi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Rest APi.release.xcconfig"; path = "Target Support Files/Pods-Github Rest APi/Pods-Github Rest APi.release.xcconfig"; sourceTree = "<group>"; };
+		DF223CCB2B9644A800F81CFE /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DF223CCC2B9644A800F81CFE /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DF223CCF2B964B5000F81CFE /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		DF223CD02B964B5000F81CFE /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		DFA2D4132B95D7E9002D3648 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		DFAFADD42B95F7CB00213DA1 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		DFAFADD52B95F7CB00213DA1 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DFADEC842B970E6A00700C6A /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFAFADD82B95FC1C00213DA1 /* SavedUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUserController.swift; sourceTree = "<group>"; };
+		DFAFADD92B95FC1C00213DA1 /* SavedUserController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedUserController.xib; sourceTree = "<group>"; };
+		DFAFADDC2B96022400213DA1 /* SavedUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUserCell.swift; sourceTree = "<group>"; };
+		DFAFADDD2B96022400213DA1 /* SavedUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedUserCell.xib; sourceTree = "<group>"; };
 		FB34889F2B91BE7E00C604E5 /* Github Rest APi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Rest APi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3488A22B91BE7E00C604E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB3488A42B91BE7E00C604E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,9 +64,7 @@
 		FB3488D42B91D9B500C604E5 /* SignInWithPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInWithPasswordViewController.xib; sourceTree = "<group>"; };
 		FB3488D72B91DD3C00C604E5 /* GithubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
 		FB3488D92B91DE2200C604E5 /* APIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
-		FB3488DB2B91E96000C604E5 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		FB3488DC2B91E96000C604E5 /* UserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
-		FB3488DF2B91F2A500C604E5 /* UIImage+Extenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extenstion.swift"; sourceTree = "<group>"; };
+		FC9A16C99195A8F44992FDDA /* Pods-Github Rest APi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Rest APi.debug.xcconfig"; path = "Target Support Files/Pods-Github Rest APi/Pods-Github Rest APi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +72,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06279C34DCB735248F68554C /* Pods_Github_Rest_APi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D19CD3C29A7D529ECD9E311 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC9A16C99195A8F44992FDDA /* Pods-Github Rest APi.debug.xcconfig */,
+				A93FB5FA6C0C9F0E7BBE0D3D /* Pods-Github Rest APi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A29BEDE906C08905260CC19F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFADEC842B970E6A00700C6A /* Kingfisher.framework */,
+				30285EAF5FF5807D30921A83 /* Pods_Github_Rest_APi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB3488962B91BE7E00C604E5 = {
 			isa = PBXGroup;
 			children = (
 				FB3488A12B91BE7E00C604E5 /* Github Rest APi */,
 				FB3488A02B91BE7E00C604E5 /* Products */,
+				1D19CD3C29A7D529ECD9E311 /* Pods */,
+				A29BEDE906C08905260CC19F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +134,6 @@
 				FB3488AE2B91BE7F00C604E5 /* Assets.xcassets */,
 				FB3488B32B91BE7F00C604E5 /* Info.plist */,
 				FB3488B02B91BE7F00C604E5 /* LaunchScreen.storyboard */,
-				FB3488DF2B91F2A500C604E5 /* UIImage+Extenstion.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -157,7 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				FB3488D32B91D9B500C604E5 /* SignInWithPasswordViewController.swift */,
-				FB3488DB2B91E96000C604E5 /* UserProfileViewController.swift */,
+				DF223CCF2B964B5000F81CFE /* ProfileController.swift */,
+				DFAFADD82B95FC1C00213DA1 /* SavedUserController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,8 +197,11 @@
 		FB3488C92B91BFD200C604E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FB3488DC2B91E96000C604E5 /* UserProfileViewController.xib */,
 				FB3488D42B91D9B500C604E5 /* SignInWithPasswordViewController.xib */,
+				DFAFADD92B95FC1C00213DA1 /* SavedUserController.xib */,
+				DF223CD02B964B5000F81CFE /* ProfileController.xib */,
+				DFAFADDC2B96022400213DA1 /* SavedUserCell.swift */,
+				DFAFADDD2B96022400213DA1 /* SavedUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,8 +211,8 @@
 			children = (
 				DFA2D4132B95D7E9002D3648 /* UserModel.swift */,
 				FB3488D72B91DD3C00C604E5 /* GithubModel.swift */,
-				DFAFADD42B95F7CB00213DA1 /* User+CoreDataClass.swift */,
-				DFAFADD52B95F7CB00213DA1 /* User+CoreDataProperties.swift */,
+				DF223CCB2B9644A800F81CFE /* User+CoreDataClass.swift */,
+				DF223CCC2B9644A800F81CFE /* User+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,9 +274,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB3488B62B91BE7F00C604E5 /* Build configuration list for PBXNativeTarget "Github Rest APi" */;
 			buildPhases = (
+				DF1226E883FB79954CC8F19E /* [CP] Check Pods Manifest.lock */,
 				FB34889B2B91BE7E00C604E5 /* Sources */,
 				FB34889C2B91BE7E00C604E5 /* Frameworks */,
 				FB34889D2B91BE7E00C604E5 /* Resources */,
+				D6B39F2B07BBF136F69D7801 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,7 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB3488DE2B91E96000C604E5 /* UserProfileViewController.xib in Resources */,
+				DFAFADDB2B95FC1C00213DA1 /* SavedUserController.xib in Resources */,
+				DFAFADDF2B96022400213DA1 /* SavedUserCell.xib in Resources */,
+				DF223CD22B964B5000F81CFE /* ProfileController.xib in Resources */,
 				FB3488B22B91BE7F00C604E5 /* LaunchScreen.storyboard in Resources */,
 				FB3488AF2B91BE7F00C604E5 /* Assets.xcassets in Resources */,
 				FB3488AA2B91BE7E00C604E5 /* Main.storyboard in Resources */,
@@ -300,27 +339,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D6B39F2B07BBF136F69D7801 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Github Rest APi/Pods-Github Rest APi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Github Rest APi/Pods-Github Rest APi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Github Rest APi/Pods-Github Rest APi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1226E883FB79954CC8F19E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Github Rest APi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB34889B2B91BE7E00C604E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAFADDE2B96022400213DA1 /* SavedUserCell.swift in Sources */,
 				FB3488BE2B91BF1A00C604E5 /* Network.swift in Sources */,
-				FB3488DD2B91E96000C604E5 /* UserProfileViewController.swift in Sources */,
-				DFAFADD72B95F7CB00213DA1 /* User+CoreDataProperties.swift in Sources */,
+				DF223CD12B964B5000F81CFE /* ProfileController.swift in Sources */,
 				FB3488C22B91BF3B00C604E5 /* Debug.swift in Sources */,
 				FB3488A72B91BE7E00C604E5 /* ViewController.swift in Sources */,
 				FB3488AD2B91BE7E00C604E5 /* Github Rest APi.xcdatamodeld in Sources */,
 				FB3488DA2B91DE2200C604E5 /* APIConstant.swift in Sources */,
 				FB3488D52B91D9B500C604E5 /* SignInWithPasswordViewController.swift in Sources */,
+				DF223CCE2B9644A800F81CFE /* User+CoreDataProperties.swift in Sources */,
+				DF223CCD2B9644A800F81CFE /* User+CoreDataClass.swift in Sources */,
 				FB3488A32B91BE7E00C604E5 /* AppDelegate.swift in Sources */,
 				DFA2D4142B95D7E9002D3648 /* UserModel.swift in Sources */,
+				DFAFADDA2B95FC1C00213DA1 /* SavedUserController.swift in Sources */,
 				FB3488D82B91DD3C00C604E5 /* GithubModel.swift in Sources */,
 				FB3488D22B91C73E00C604E5 /* UIColorHex.swift in Sources */,
 				FB3488A52B91BE7E00C604E5 /* SceneDelegate.swift in Sources */,
-				FB3488E02B91F2A500C604E5 /* UIImage+Extenstion.swift in Sources */,
 				FB3488C52B91BF5F00C604E5 /* AlerUser.swift in Sources */,
-				DFAFADD62B95F7CB00213DA1 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,11 +549,13 @@
 		};
 		FB3488B72B91BE7F00C604E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC9A16C99195A8F44992FDDA /* Pods-Github Rest APi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Github Rest APi/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -494,11 +578,13 @@
 		};
 		FB3488B82B91BE7F00C604E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A93FB5FA6C0C9F0E7BBE0D3D /* Pods-Github Rest APi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Github Rest APi/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
